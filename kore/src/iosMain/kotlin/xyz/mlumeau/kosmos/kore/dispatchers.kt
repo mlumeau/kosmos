@@ -7,14 +7,10 @@ import kotlinx.coroutines.Runnable
 import platform.darwin.dispatch_async
 import platform.darwin.dispatch_get_main_queue
 import kotlin.coroutines.CoroutineContext
-import kotlin.native.concurrent.Worker
 
 
 internal class MainDispatcher: CoroutineDispatcher() {
     override fun dispatch(context: CoroutineContext, block: Runnable) {
-        val worker = Worker.start()
-
-
         dispatch_async(dispatch_get_main_queue()) {
             block.run()
         }

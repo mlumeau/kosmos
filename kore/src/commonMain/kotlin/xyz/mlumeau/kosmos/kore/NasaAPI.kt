@@ -29,8 +29,6 @@ class NasaAPI {
 
     fun getAPOD(completion: (APOD) -> Unit) : Job {
 
-
-
         return getNetworkScope().launch {
             completion(requestAPOD())
         }
