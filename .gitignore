@@ -12,3 +12,9 @@
 /captures
 .externalNativeBuild
 
+
+\.idea/codeStyles/Project\.xml
+
+\.idea/encodings\.xml
+
+\.idea/vcs\.xml
